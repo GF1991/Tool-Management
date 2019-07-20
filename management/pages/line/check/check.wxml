@@ -1,0 +1,128 @@
+<!--pages/line/check/check.wxml-->
+
+
+<view class='location'>
+    <view>工具</view>
+    <view class='select_box'>
+
+        <view
+            class='select'
+            catchtap='selectTap'
+        >
+            <text class='select_text'> {{source[index1].name}}</text>
+            <image
+                class='select_img {{showSource&&"select_img_rotate"}}'
+                src='../../image/image13.jpg'
+            ></image>
+
+        </view>
+
+        <view
+            class='option_box'
+            style='height:{{showSource?(source.length>5?300:source.length*60):0}}rpx;'
+        >
+            <text
+                class='option'
+                style='{{index==source.length-1&&"border:0;"}}'
+                wx:for='{{source}}'
+                wx:key='this'
+                data-index='{{index}}'
+                bindtap="optiontext"
+            >{{item.name}}</text>
+      
+        </view>
+    </view>
+
+<view>机位</view>
+    <view class='select_box'>
+
+        <view
+            class='select'
+            catchtap='selectPositionTap'
+        >
+            <text class='select_text'>{{position[index2].position}}</text>
+            <image
+                class='select_img {{showPosition&&"select_img_rotate"}}'
+                src='../../image/image13.jpg'
+            ></image>
+
+        </view>
+
+        <view
+            class='option_box'
+            style='height:{{showPosition?(position.length>5?300:position.length*60):0}}rpx;'
+        >
+            <text
+                class='option'
+                style='{{index==position.length-1&&"border:0;"}}'
+                wx:for='{{position}}'
+                wx:key='this'
+                data-index='{{index}}'
+                bindtap="optionPosition"
+            >{{item.position}}</text>
+      
+        </view>
+    </view>
+
+
+
+</view>
+
+
+<view
+    bindtap="loadbutton"
+    class="button load"
+>载入数据</view>
+
+
+<view
+    bindtap="addbutton"
+    class="button add"
+>添加</view>
+<view
+    bindtap="revise"
+    class="button revise"
+>修改</view>
+<view
+    bindtap="deletebutton"
+    class="button delete"
+>删除</view>
+<view
+    bindtap="querybutton"
+    class="button query"
+>查询</view>
+<view
+    bindtap="clearbutton"
+    class="button clear"
+>清空数据库</view>
+
+<view class='location'>
+    <view>工具位置清单</view>
+    <view class='select_box'>
+        <view
+            class='select'
+            catchtap='selectToolsTap'
+        >
+         <text class='select_text'>{{tools[index3].position}} {{tools[index3].name}} {{tools[index3].user}}</text>
+            <image
+                class='select_img {{showTools&&"select_img_rotate"}}'
+                src='../../image/image13.jpg'
+            ></image>
+        </view>
+
+        <view
+            class='option_box'
+            style='height:{{showTools?(tools.length>5?300:tools.length*60):0}}rpx;'
+        >
+            <text
+                class='option'
+                style='{{index==tools.length-1&&"border:0;"}}'
+                wx:for='{{tools}}'
+                wx:key='this'
+                data-index='{{index}}'
+                bindtap="optionList"
+            >{{item.position}} {{item.name}} {{item.user}}</text>
+      
+        </view>
+    </view>
+</view>

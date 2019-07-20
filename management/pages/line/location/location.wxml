@@ -1,0 +1,41 @@
+<!--pages/line/location/location.wxml-->
+<view class='location'>
+<view class='jiwei'>机位</view>
+<view class='select_box'>
+
+    <view class='select' catchtap='selectTap'>
+
+        <text class='select_text'>{{selectData[index]}}</text>
+
+        <image class='select_img {{show&&"select_img_rotate"}}' src='../../image/image13.jpg'></image>         
+
+    </view>
+
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+
+    </view>
+
+</view>
+</view>
+
+
+<view class='location'>
+<view class='gongju'>工具</view>
+<view class='select_box'>
+
+    <view class='select' catchtap='selectTap'>
+
+        <text class='select_text'>{{selectData2[index2]}}</text>
+
+        <image class='select_img {{show&&"select_img_rotate"}}' src='../../image/image13.jpg'></image>         
+
+    </view>
+
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+ <text class='option' style='{{index2==selectData.length-1&&"border:0;"}}' wx:for='{{selectData2}}' wx:key='this' data-index='{{index2}}' catchtap='optionTap'>{{item}}</text>
+      
+    </view>
+</view>
+</view>

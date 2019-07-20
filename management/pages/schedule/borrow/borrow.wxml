@@ -1,0 +1,40 @@
+<!--pages/schedule/borrow/borrow.wxml-->
+
+<view class="itemView">工具搜索：
+    <input class="input" placeholder="请输入工具名称或件号" style="background-color:#fbf9fe"
+     bindinput="passWdInput" />
+  </view>
+
+
+<view class='borrow'>
+<view class='select_box'>
+
+    <view class='select' catchtap='selectTap'>
+
+        <text class='select_text'>{{selectData[index]}}</text>
+
+        <image class='select_img {{show&&"select_img_rotate"}}' src='../../image/image13.jpg'></image>         
+
+    </view>
+
+    <view class='option_box' style='height:{{show?(selectData.length>10?300:selectData.length*60):0}}rpx;'>
+
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+
+    </view>
+
+</view>
+
+<view class="viewName" >
+  <button class="loginBtn" bindtap="loginBtnClick">借</button>
+  <button class="resetBtn" bindtap="resetBtnClick">还</button>
+</view>
+<view>{{infoMess}}</view>
+<view>{{userName}}</view>
+<view>{{passWd}}</view>
+<view class="viewName" style="margin-top: 60px;">
+  <navigator url="Component/TextInput/TextInput">
+  </navigator>
+</view>
+
+</view>

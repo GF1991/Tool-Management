@@ -1,0 +1,23 @@
+<!--index.wxml-->
+
+<view class="container">
+<view > <image src="../image/image.png" class="gf-image" mode="cover"></image></view>
+  <view class="userinfo">
+  
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">点击头像查看借出工具</text>
+    </block>
+  </view>
+
+<view class="usermotto">
+    <input class="input" name="userName" placeholder="请输入员工号 "  type="number" style="background-color:#fbf9fe"  placeholder-style="font-size:20px" placeholder-class="center"
+    bindinput="userNameInput"/>
+     
+  </view>
+  <view class="login"  >
+  <view> {{user}}</view>
+  <button class="loginBtn" bindtap="bindLogin" >登录</button>
+</view>
+  </view>

@@ -1,0 +1,1 @@
+module.exports.serverUrl = "http://192.168.43.142:3000";

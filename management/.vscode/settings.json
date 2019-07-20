@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.wxml": "html",
+        "*.wxss": "css"
+    },
+    "html.format.wrapAttributes": "force-expand-multiline",
+    "editor.formatOnSave": true
+}

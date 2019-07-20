@@ -1,0 +1,15 @@
+<!--pages/line/line.wxml-->
+<view class="container">
+    <block >
+    <navigator url="../line/location/location" hover-class="navigator-hover">
+      <image  class="gf-image10" src="../image/image10.png" mode="cover"></image>
+    </navigator>
+      <text class="name">工具定位</text>
+    </block>
+    <block >
+    <navigator url="../line/check/check" hover-class="navigator-hover">
+      <image  class="gf-image11" src="../image/image11.png" mode="cover"></image>
+    </navigator>
+      <text class="name">状态查看</text>
+    </block>
+</view>

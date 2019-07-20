@@ -1,0 +1,11 @@
+/* pages/schedule/schedule.wxss */
+.gf-image8 {
+
+  width: 100px;
+  height: 100px
+}
+.gf-image11 {
+  margin-top:100px;
+  width: 100px;
+  height: 100px
+}

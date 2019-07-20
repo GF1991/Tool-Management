@@ -1,0 +1,13 @@
+/* pages/line/line.wxss */
+.gf-image10 {
+
+  width: 100px;
+  height: 100px
+ 
+}
+.gf-image11 {
+  margin-top:100px;
+  width: 100px;
+  height: 100px
+
+}

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/schedule/schedule",
+    "pages/logs/logs",
+    "pages/line/line",
+    "pages/schedule/borrow/borrow",
+    "pages/schedule/check/check",
+    "pages/line/location/location",
+    "pages/line/check/check"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F90",
+    "navigationBarTitleText": "工具管理系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "pages/image/image5.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/schedule/schedule",
+        "iconPath": "pages/image/image6.png",
+        "text": "定检"
+      },
+      {
+        "pagePath": "pages/line/line",
+        "iconPath": "pages/image/image3.png",
+        "text": "航线"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
